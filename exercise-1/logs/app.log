@@ -1,0 +1,56 @@
+2022-03-24 01:07:23,844 INFO fis.java.topic12.Exercise1Application [restartedMain] Starting Exercise1Application using Java 17.0.2 on DESKTOP-RJDJN7B with PID 13164 (D:\FIS\Java\Topic13&14\exercise-1\target\classes started by Dell in D:\FIS\Java\Topic13&14\exercise-1)
+2022-03-24 01:07:23,845 DEBUG fis.java.topic12.Exercise1Application [restartedMain] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-24 01:07:23,845 INFO fis.java.topic12.Exercise1Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 01:07:24,235 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7fc71487] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-24 01:07:24,239 INFO org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping [restartedMain] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-24 01:07:24,328 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2022-03-24 01:07:24,329 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-24 01:07:24,330 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 01:07:24,508 INFO org.apache.jasper.servlet.TldScanner [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-03-24 01:07:24,519 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-24 01:07:24,520 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 671 ms
+2022-03-24 01:07:24,736 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-24 01:07:24,761 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path ''
+2022-03-24 01:07:24,855 INFO fis.java.topic12.Exercise1Application [restartedMain] Started Exercise1Application in 1.122 seconds (JVM running for 314.819)
+2022-03-24 01:07:24,858 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-03-24 01:08:03,259 INFO fis.java.topic12.Exercise1Application [restartedMain] Starting Exercise1Application using Java 17.0.2 on DESKTOP-RJDJN7B with PID 13164 (D:\FIS\Java\Topic13&14\exercise-1\target\classes started by Dell in D:\FIS\Java\Topic13&14\exercise-1)
+2022-03-24 01:08:03,259 DEBUG fis.java.topic12.Exercise1Application [restartedMain] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-24 01:08:03,259 INFO fis.java.topic12.Exercise1Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 01:08:03,612 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$7fc71487] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-24 01:08:03,614 INFO org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping [restartedMain] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-24 01:08:03,653 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2022-03-24 01:08:03,654 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-24 01:08:03,654 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 01:08:03,765 INFO org.apache.jasper.servlet.TldScanner [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-03-24 01:08:03,769 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-24 01:08:03,770 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 493 ms
+2022-03-24 01:08:03,969 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-24 01:08:03,983 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path ''
+2022-03-24 01:08:03,988 INFO fis.java.topic12.Exercise1Application [restartedMain] Started Exercise1Application in 0.831 seconds (JVM running for 353.952)
+2022-03-24 01:08:03,991 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-03-24 01:10:36,169 INFO fis.java.topic12.Exercise1Application [restartedMain] Starting Exercise1Application using Java 17.0.2 on DESKTOP-RJDJN7B with PID 2740 (D:\FIS\Java\Topic13&14\exercise-1\target\classes started by Dell in D:\FIS\Java\Topic13&14\exercise-1)
+2022-03-24 01:10:36,172 DEBUG fis.java.topic12.Exercise1Application [restartedMain] Running with Spring Boot v2.6.4, Spring v5.3.16
+2022-03-24 01:10:36,173 INFO fis.java.topic12.Exercise1Application [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-03-24 01:10:36,264 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 01:10:36,264 INFO org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 01:10:37,664 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$43d1a152] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-24 01:10:37,724 INFO org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping [restartedMain] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2022-03-24 01:10:38,330 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8081 (http)
+2022-03-24 01:10:38,349 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Initializing ProtocolHandler ["http-nio-8081"]
+2022-03-24 01:10:38,350 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2022-03-24 01:10:38,350 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 01:10:38,710 INFO org.apache.jasper.servlet.TldScanner [restartedMain] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-03-24 01:10:38,732 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-03-24 01:10:38,732 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2467 ms
+2022-03-24 01:10:39,394 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2022-03-24 01:10:39,413 INFO org.apache.coyote.http11.Http11NioProtocol [restartedMain] Starting ProtocolHandler ["http-nio-8081"]
+2022-03-24 01:10:39,501 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8081 (http) with context path ''
+2022-03-24 01:10:39,517 INFO fis.java.topic12.Exercise1Application [restartedMain] Started Exercise1Application in 3.934 seconds (JVM running for 5.442)
+2022-03-24 01:10:45,254 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 01:10:45,254 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-03-24 01:10:45,255 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2022-03-24 01:10:45,329 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8081-exec-1] HikariPool-1 - Starting...
+2022-03-24 01:10:45,881 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8081-exec-1] HikariPool-1 - Start completed.
+2022-03-24 01:10:45,924 INFO fis.java.topic12.controller.MainController [http-nio-8081-exec-1] Get 8 products
+2022-03-24 01:12:20,480 INFO com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown initiated...
+2022-03-24 01:12:20,495 INFO com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown completed.
