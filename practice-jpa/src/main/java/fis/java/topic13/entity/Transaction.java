@@ -25,7 +25,7 @@ public class Transaction {
 	private Date transactionDate;	
 	
 	@Column(name = "to_account")
-	private Number toAccount;
+	private Long toAccount;
 	
 	@Column(name = "amount")
 	private Double amount;

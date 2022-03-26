@@ -4,13 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PracticeJpaApplication {
+public class PracticeJpa2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PracticeJpaApplication.class, args);
+		SpringApplication.run(PracticeJpa2Application.class, args);
 	}
-	private void run() {
-		// TODO Auto-generated method stub
-		System.out.println(1);
-	}
+
 }

@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,5 +38,6 @@ public class Account {
 	private Integer status = 1;
 	
 	@OneToMany(mappedBy = "account")
+	@JsonIgnore
 	Set<Transaction> transactions;
 }
