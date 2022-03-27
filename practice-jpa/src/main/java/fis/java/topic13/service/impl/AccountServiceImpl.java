@@ -26,18 +26,8 @@ public class AccountServiceImpl implements AccountService{
 	private static Logger LOG = LogManager.getLogger(AccountServiceImpl.class);
 	
 	@Override
-	public Account save(AccountDto accountDto){
-		try {
-			accountHelper.checkAccountDto(accountDto);
-			
-			Account account = accountHelper.transfer(accountDto);
-			
-			LOG.info("Adding account to database: {}", account);
-			
-			return accountRepository.save(account);
-		} catch (NotValidAccountException e) {
-			return null;
-		}
+	public Account save(Account account){
+		return accountRepository.save(account);
 	}
 
 
@@ -72,12 +62,4 @@ public class AccountServiceImpl implements AccountService{
 		accountRepository.deleteById(id);
 	}
 
-
-	@Override
-	public Account update(Account account) {
-		// TODO Auto-generated method stub
-		return accountRepository.save(account);
-	}
-	
-	
 }

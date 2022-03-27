@@ -23,56 +23,58 @@ import fis.java.topic13.service.AccountService;
 public class TransactionHelper {
 	@Autowired
 	private AccountService accountService;
-	
+
 	private static Logger LOG = LogManager.getLogger(TransactionHelper.class);
-	
+
 	public Transaction convertFromDto(TransactionDto transactionDto) {
-		Account from = accountService.findById(transactionDto.getFromAccount());
-		
 		Transaction transaction = new Transaction();
+		Account from = accountService.findById(transactionDto.getFromAccount());
 		transaction.setAccount(from);
 		transaction.setToAccount(transactionDto.getToAccount());
 		transaction.setAmount(transactionDto.getAmount());
 		transaction.setContent(transactionDto.getContent());
 		transaction.setTransactionDate(new Date());
-		return transaction;
+		try {
+			sendMoney(transactionDto.getFromAccount(), transactionDto.getToAccount(), transactionDto.getAmount());
+		} catch (NotValidAccountException e) {
+			transaction.setErrorReason(e.getMessage());
+		}
+		return transaction;	
 	}
-	
-	public void checkTransaction(TransactionDto transactionDto) throws ErrorTransactionException {
-		Account from = accountService.findById(transactionDto.getFromAccount());
-		if(from == null) {
+
+	@Transactional(propagation = Propagation.MANDATORY)
+	public synchronized void addAmount(Long id, double amount) {
+		Account acc = accountService.findById(id);
+		if (acc == null) {
 			LOG.error("From account is not exist");
-			throw new ErrorTransactionException("4004", "From account is not exist");
+			throw new NotValidAccountException("4004", "Account is not exist");
 		}else {
-			if(from.getStatus() != 1) {
+			if(acc.getStatus() != 1) {
 				LOG.error("From account is out of date");
 				throw new ErrorTransactionException("4005", "From account is out of date");
 			}
-			if(from.getBalance() < transactionDto.getAmount()) {
-				LOG.error("From account`s balance is not enough");
-				throw new ErrorTransactionException("4005", "From account`s balance is not enough");
-			}
 		}
-		
-		Account to = accountService.findById(transactionDto.getToAccount());
-		if(to == null) {
-			LOG.error("To account is not exist");
-			throw new ErrorTransactionException("4004", "To account is not exist");
-		}else {
-			if(to.getStatus() != 1) {
-				LOG.error("To account is out of date");
-				throw new ErrorTransactionException("4005", "To account is out of date");
-			}
+		double newBalance = acc.getBalance() + amount;
+		if (newBalance < 0) {
+			LOG.error("From account`s balance is not enough");
+			throw new NotValidAccountException("4006", "Account's balance is not enough");
 		}
+		acc.setBalance(newBalance);
+		accountService.save(acc);
 	}
-	@Transactional(propagation = Propagation.MANDATORY)
-	public void sendMoney(Transaction transaction) {
+
+	@Transactional(propagation = Propagation.REQUIRES_NEW, rollbackFor = NotValidAccountException.class)
+	public void sendMoney(Long fromAccountId, Long toAccountId, double amount) throws NotValidAccountException {
+
+		addAmount(toAccountId, amount);
+		addAmount(fromAccountId, -amount);
+	}
+	
+	public String notice(Transaction transaction) {
+		StringBuilder sb = new StringBuilder();
 		Account from = transaction.getAccount();
-		Account to = accountService.findById(transaction.getId());
-		
-		from.setBalance(from.getBalance() - transaction.getAmount());
-		accountService.update(from);
-		to.setBalance(to.getBalance() + transaction.getAmount());
-		accountService.update(to);
+		sb.append(from.getAccountName()).append(" - ").append(from.getAccountNumber()).append(" - ");
+		sb.append("tăng ").append(transaction.getAmount()).append(" VND vào lúc ").append(transaction.getTransactionDate().toString());
+		return sb.toString();
 	}
 }

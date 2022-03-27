@@ -10,9 +10,7 @@ public interface AccountService {
 
 	List<Account> findAll();
 
-	Account save(AccountDto accountDto) throws NotValidAccountException;
-
-	Account update(Account account);
+	Account save(Account account) throws NotValidAccountException;
 	
 	Account findByAccountNumber(String accountNumber);
 	

@@ -8,6 +8,5 @@ import fis.java.topic13.entity.Account;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Long>{
-	@Query("select a from Account a where a.accountNumber = ?1")
 	Account findByAccountNumber(String accountNumber);
 }

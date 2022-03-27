@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fis.java.topic13.dto.AccountDto;
 import fis.java.topic13.entity.Account;
 import fis.java.topic13.exception.NotValidAccountException;
+import fis.java.topic13.helper.AccountHelper;
 import fis.java.topic13.service.AccountService;
 
 @RestController
@@ -23,6 +24,9 @@ public class AccountController {
 	@Autowired
 	AccountService accountService;
 
+	@Autowired
+	AccountHelper accountHelper;
+	
 	@GetMapping("/accounts")
 	public ResponseEntity<?> getAccounts(){
 		return ResponseEntity.ok().body(accountService.findAll());
@@ -31,7 +35,9 @@ public class AccountController {
 	@PostMapping("/account/save")
 	public ResponseEntity<?> saveAccount(@RequestBody AccountDto accountDto){	
 		try {
-			return ResponseEntity.ok().body(accountService.save(accountDto));
+			accountHelper.checkAccountDto(accountDto);
+			Account account = accountHelper.transfer(accountDto);
+			return ResponseEntity.ok().body(accountService.save(account));
 		} catch (NotValidAccountException e) {
 			return ResponseEntity.ok().body(e);
 		}
@@ -55,4 +61,5 @@ public class AccountController {
 		accountService.deleteById(account.getId());
 		return ResponseEntity.ok().body("Delete successfully");
 	}
+	
 }

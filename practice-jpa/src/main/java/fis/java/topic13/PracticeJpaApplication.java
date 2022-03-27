@@ -1,5 +1,6 @@
 package fis.java.topic13;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,9 +9,5 @@ public class PracticeJpaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PracticeJpaApplication.class, args);
-	}
-	private void run() {
-		// TODO Auto-generated method stub
-		System.out.println(1);
 	}
 }

@@ -31,18 +31,12 @@ public class TransactionServiceImpl implements TransactionService{
 
 	@Override
 	public Transaction save(TransactionDto transactionDto) {
-		Transaction transaction = transactionHelper.convertFromDto(transactionDto);
-		try {
-			transactionHelper.checkTransaction(transactionDto);
-		} catch (ErrorTransactionException e) {
-			// TODO: handle exception
-			transaction.setErrorReason(e.getMessage());
-		}
+		Transaction transaction = transactionHelper.convertFromDto(transactionDto);	
+		
 		String error = transaction.getErrorReason();
 		if(error == null || error.isEmpty()) {
 			transaction.setStatus(1);
 		}else {
-			transactionHelper.sendMoney(transaction);
 			transaction.setStatus(0);
 		}
 		LOG.info("Adding transaction to database {}", transaction);
