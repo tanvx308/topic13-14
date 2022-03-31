@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import fis.java.topic13.entity.Category;
-import fis.java.topic13.entity.Detail;
-import fis.java.topic13.entity.Product;
 @Repository
-public interface IDetailRepo extends JpaRepository<Detail, Long>{
+public interface ICategoryRepo extends JpaRepository<Category, Long>{
+	@Query(name = "report")
+	List<Object[]> report();
 }

@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import fis.java.topic13.entity.Category;
 import fis.java.topic13.entity.Detail;
+import fis.java.topic13.entity.Product;
 import fis.java.topic13.exception.AppException;
 import fis.java.topic13.repo.IDetailRepo;
 import fis.java.topic13.repo.IOrderRepo;

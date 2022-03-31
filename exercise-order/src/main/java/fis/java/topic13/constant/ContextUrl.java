@@ -34,4 +34,8 @@ public class ContextUrl {
 	public static final String DETAIL_SAVE = "/detail/save"; 
 	
 	public static final String DETAIL_FIND_BY_ORDER = "/details"; 
+	
+	//category url
+	public static final String CATEGORY_FIND_ALL = "/categories";
+
 }

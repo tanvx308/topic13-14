@@ -56,4 +56,5 @@ public class DetailController {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
 		}
 	}
+	
 }

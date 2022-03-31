@@ -45,6 +45,6 @@ public class Customer {
 	private Boolean available;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "order_id")
+	@JoinColumn(name = "customer_id")
 	private List<Order> orders;
 }
